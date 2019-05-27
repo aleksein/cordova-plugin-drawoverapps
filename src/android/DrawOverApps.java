@@ -43,6 +43,7 @@ import org.apache.cordova.overApps.Services.OverAppsService;
 import org.apache.cordova.overApps.Services.ServiceParameters;
 
 import android.os.PowerManager;
+import android.content.Context;
 
 
 public class DrawOverApps extends CordovaPlugin {
