@@ -75,14 +75,11 @@ import java.util.Date;
 
          inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
 
-         //overAppsHead = inflater.inflate(R.layout.service_over_apps_head, null, false);
-         overAppsHead = inflater.inflate(getResources().getIdentifier("service_over_apps_head", "layout", getPackageName());
-         //overAppsView = inflater.inflate(R.layout.service_over_apps_view, null, false);
-         overAppsView = inflater.inflate(getResources().getIdentifier("service_over_apps_view", "layout", getPackageName());
-
-         webView = (WebView) overAppsView.findViewById(R.id.webView);
-         imageHead = (ImageView) overAppsHead.findViewById(R.id.imageHead);
-         imgClose = (ImageView) overAppsView.findViewById(R.id.imgClose);
+         overAppsHead = inflater.inflate(getResources().getIdentifier("service_over_apps_head", "layout", getPackageName()));
+         overAppsView = inflater.inflate(getResources().getIdentifier("service_over_apps_view", "layout", getPackageName()));
+         webView = (WebView) overAppsView.findViewById(getResources().getIdentifier("webView", "id", getPackageName()));
+         imageHead = (ImageView) overAppsHead.findViewById(getResources().getIdentifier("imageHead", "id", getPackageName()));
+         imgClose = (ImageView) overAppsView.findViewById(getResources().getIdentifier("imgClose", "id", getPackageName()));
 
          imgClose.setOnClickListener(new View.OnClickListener() {
              @Override
