@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-drawoverapps" 
+        id="cordova-plugin-drawoverapps"
         version="1.0.6">
     <name>Cordova Draw Over Apps</name>
 
@@ -38,7 +38,6 @@
            <config-file target="AndroidManifest.xml" parent="/*">
                <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
            </config-file>
-
        <source-file src="src/android/Services/OverAppsService.java" target-dir="src/org/apache/cordova/overApps/Services" />
        <source-file src="src/android/Services/ServiceParameters.java" target-dir="src/org/apache/cordova/overApps/Services" />
        <source-file src="src/android/GeneralUtils/KeyDispatchLayout.java" target-dir="src/org/apache/cordova/overApps/GeneralUtils" />
