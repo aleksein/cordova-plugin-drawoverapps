@@ -75,8 +75,9 @@ import java.util.Date;
 
          inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
 
-         overAppsHead = inflater.inflate(getResources().getIdentifier("service_over_apps_head", "layout", getPackageName()));
-         overAppsView = inflater.inflate(getResources().getIdentifier("service_over_apps_view", "layout", getPackageName()));
+         //overAppsHead = inflater.inflate(R.layout.service_over_apps_head, null, false);
+         overAppsHead = inflater.inflate(getResources().getIdentifier("service_over_apps_head", "layout", getPackageName()), null, false);
+         overAppsView = inflater.inflate(getResources().getIdentifier("service_over_apps_view", "layout", getPackageName()), null, false);
          webView = (WebView) overAppsView.findViewById(getResources().getIdentifier("webView", "id", getPackageName()));
          imageHead = (ImageView) overAppsHead.findViewById(getResources().getIdentifier("imageHead", "id", getPackageName()));
          imgClose = (ImageView) overAppsView.findViewById(getResources().getIdentifier("imgClose", "id", getPackageName()));
