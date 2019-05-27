@@ -84,15 +84,17 @@ public class DrawOverApps extends CordovaPlugin {
 	        		}
 
 					else if (action.equals(ACTION_CHECK_BATTERY_OPTIMIZATION)){
-
-						PowerManager pm = (PowerManager) activity.getSystemService(Context.POWER_SERVICE);
-						if (!pm.isIgnoringBatteryOptimizations(activity.getPackageName())) {
-							Intent intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,Uri.parse("package:" + activity.getPackageName()));
-							activity.startActivityForResult(intent, 0);
-							callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "Granting Ignore Battery Optimization Permission "));
-						}else{
-							callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "Ignore Battery Optimization Permission already Granted "));
+						if (Build.VERSION.SDK_INT >= 23) {
+							PowerManager pm = (PowerManager) activity.getSystemService(Context.POWER_SERVICE);
+							if (!pm.isIgnoringBatteryOptimizations(activity.getPackageName())) {
+								Intent intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse("package:" + activity.getPackageName()));
+								activity.startActivityForResult(intent, 0);
+								callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "Granting Ignore Battery Optimization Permission "));
+							} else {
+								callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "Ignore Battery Optimization Permission already Granted "));
+							}
 						}
+						return true;
 					}
 
 					else if (action.equals(ACTION_OPEN_OVER_APP_VIEW)) {
