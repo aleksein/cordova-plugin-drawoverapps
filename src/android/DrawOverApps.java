@@ -82,9 +82,8 @@ public class DrawOverApps extends CordovaPlugin {
 
 					else if (action.equals(ACTION_CHECK_BATTERY_OPTIMIZATION)){
 
-						String packageName = activity.getPackageName();
 						PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-						if (pm.isIgnoringBatteryOptimizations(packageName)) {
+						if (pm.isIgnoringBatteryOptimizations(activity.getPackageName())) {
 							Intent intent = new Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS,Uri.parse("package:" + activity.getPackageName()));
 							activity.startActivityForResult(intent, 0);
 							callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, "Granting Ignore Battery Optimization Permission "));
