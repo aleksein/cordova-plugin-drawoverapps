@@ -25,6 +25,9 @@ module.exports = {
     checkPermission: function (successCallback, failureCallback) {
         cordova.exec(successCallback, failureCallback, 'DrawOverApps', 'checkPermission', []);
     },
+    checkBatteryOptimization: function (successCallback, failureCallback) {
+        cordova.exec(successCallback, failureCallback, 'DrawOverApps', 'checkBatteryOptimization', []);
+    },
     startOverApp: function (options,successCallback, failureCallback) {
         cordova.exec(successCallback, failureCallback, 'DrawOverApps', 'open', [ options ]);
     },
