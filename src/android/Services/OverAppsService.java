@@ -74,11 +74,16 @@ import java.util.Date;
          windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 
          inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
-         overAppsHead = inflater.inflate(R.layout.service_over_apps_head, null, false);
-         overAppsView = inflater.inflate(R.layout.service_over_apps_view, null, false);
+
+         //overAppsHead = inflater.inflate(R.layout.service_over_apps_head, null, false);
+         overAppsHead = inflater.inflate(getResources().getIdentifier("service_over_apps_head", "layout", getPackageName());
+         //overAppsView = inflater.inflate(R.layout.service_over_apps_view, null, false);
+         overAppsView = inflater.inflate(getResources().getIdentifier("service_over_apps_view", "layout", getPackageName());
+
          webView = (WebView) overAppsView.findViewById(R.id.webView);
          imageHead = (ImageView) overAppsHead.findViewById(R.id.imageHead);
          imgClose = (ImageView) overAppsView.findViewById(R.id.imgClose);
+
          imgClose.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
