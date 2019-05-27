@@ -45,10 +45,11 @@ import org.apache.cordova.overApps.Services.ServiceParameters;
 
 public class DrawOverApps extends CordovaPlugin {
 		private static final String TAG = "DrawOverApps";
-	  private static final String ACTION_OPEN_OVER_APP_VIEW = "open";
+	    private static final String ACTION_OPEN_OVER_APP_VIEW = "open";
 		private static final String ACTION_CLOSE_OVER_APP_VIEW = "close";
 		private static final String ACTION_CHECK_OVER_APP_PERMISSION = "checkPermission";
-	  private static final String FOLDER_PATH = "file:///android_asset/www/";
+		private static final String ACTION_CHECK_BATTERY_OPTIMIZATION = "checkBatteryOptimization";
+	    private static final String FOLDER_PATH = "file:///android_asset/www/";
 		public Activity activity;
 		public ServiceParameters serviceParameters;
 		CallbackContext callback;
@@ -76,8 +77,19 @@ public class DrawOverApps extends CordovaPlugin {
 										}
 
 								}
-		            return true;
+		            			return true;
 	        		}
+
+					else if (action.equals(ACTION_CHECK_BATTERY_OPTIMIZATION)){
+
+						Intent intent = new Intent();
+						String packageName = context.getPackageName();
+						PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+						if (pm.isIgnoringBatteryOptimizations(packageName)) {
+							intent.setAction(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
+							context.startActivity(intent);
+						}
+					}
 
 					else if (action.equals(ACTION_OPEN_OVER_APP_VIEW)) {
 
