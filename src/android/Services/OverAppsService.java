@@ -208,7 +208,7 @@ import java.util.Date;
 
          if (keyDispatureView ==null)
          {
-             keyDispatureView = inflater.inflategetResources().getIdentifier("key_dispature", "layout", getPackageName()), null, false);
+             keyDispatureView = inflater.inflate(getResources().getIdentifier("key_dispature", "layout", getPackageName()), null, false);
          }
          rlKeyDispature = (KeyDispatchLayout) keyDispatureView.findViewById(getResources().getIdentifier("tab_left", "id", getPackageName()));
 
