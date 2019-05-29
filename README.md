@@ -21,6 +21,7 @@ It is also possible to install via repo url directly
  - window.overApps.checkPermission
  - window.overApps.startOverApp
  - window.overApps.closeOverApp
+ - window.overApps.checkBatteryOptimization
  
 ### window.overApps.checkPermission
 This to check draw-over-apps permession and open system permission window to be granted  
@@ -31,7 +32,7 @@ This to check draw-over-apps permession and open system permission window to be 
 
 |                                    |                                     |
 | ---------------------------------  | --------------------------------    |
-|<img  src="shots/permission.png"  />| <img src="shots/permission2.png"  />|
+<!--|<img  src="shots/permission.png"  />| <img src="shots/permission2.png"  />|-->
 
 
 
@@ -41,6 +42,16 @@ start service function display the over-all head or the web view according to op
 otherwise the `failed` is called instead.
 
     window.overApps.startOverApp(options, success, failed);
+
+### window.overApps.checkBatteryOptimization
+This to check battery optimising permission (ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+
+      window.overApps.checkBatteryOptimization(function(msg){
+             console.log(msg);
+      });
+
+|                                    |                                     |
+| ---------------------------------  | --------------------------------    |
 
 #### Options
 
