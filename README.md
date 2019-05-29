@@ -1,4 +1,4 @@
-Draw Over All Apps plugin for Cordova
+Draw Over All Apps plugin for Cordova AND request to stop optimising battery usage
 ===============================
 
 
