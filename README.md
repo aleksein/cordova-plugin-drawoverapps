@@ -1,4 +1,4 @@
-Draw Over All Apps plugin for Cordova AND request to stop optimising battery usage
+Draw Over All Apps plugin for Cordova (updated for working with PhoneGap build process) AND request to stop optimising battery usage (ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
 ===============================
 
 
@@ -30,12 +30,6 @@ This to check draw-over-apps permession and open system permission window to be 
              console.log(msg);
       });
 
-|                                    |                                     |
-| ---------------------------------  | --------------------------------    |
-<!--|<img  src="shots/permission.png"  />| <img src="shots/permission2.png"  />|-->
-
-
-
 ### window.overApps.startOverApp
 
 start service function display the over-all head or the web view according to options. If successful the `success` is called,
@@ -49,9 +43,6 @@ This to check battery optimising permission (ACTION_REQUEST_IGNORE_BATTERY_OPTIM
       window.overApps.checkBatteryOptimization(function(msg){
              console.log(msg);
       });
-
-|                                    |                                     |
-| ---------------------------------  | --------------------------------    |
 
 #### Options
 
