@@ -7,14 +7,10 @@ Android Cordova Plugin that uses draw over all apps feature to display a HTML We
 This plugin was successfully tested on Android 5.1 , also on Marshmallow (Android 6.0).
 
 ## Install  ##
-
-	cordova plugin add cordova-plugin-drawoverapps
+	
 It is also possible to install via repo url directly 
 
-    cordova plugin add https://github.com/ahmedwahba/cordova-plugin-drawoverapps
-    
-
-
+    cordova plugin add https://github.com/aleksein/cordova-plugin-drawoverapps
     
 ## Functions
 
