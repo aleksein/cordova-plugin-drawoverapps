@@ -19,6 +19,13 @@ It is also possible to install via repo url directly
  - window.overApps.closeOverApp
  - window.overApps.checkBatteryOptimization
  
+### window.overApps.checkBatteryOptimization
+This to check battery optimising permission (ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+
+      window.overApps.checkBatteryOptimization(function(msg){
+             console.log(msg);
+      }); 
+ 
 ### window.overApps.checkPermission
 This to check draw-over-apps permession and open system permission window to be granted  
 
@@ -81,18 +88,10 @@ It closes over app webview from one of the webview UI or event
 
     OverApps.closeWebView();
 
-
-### window.overApps.checkBatteryOptimization
-This to check battery optimising permission (ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
-
-      window.overApps.checkBatteryOptimization(function(msg){
-             console.log(msg);
-      });
-
 ## Licence ##
 
 
-Copyright (c) 2017	Ahmed Wahba & Mohamed Sayed
+Copyright (c) 2017	Ahmed Wahba & Mohamed Sayed & AlekseiN
 
 Permission is here by granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
