@@ -1,8 +1,8 @@
-Draw Over All Apps plugin for Cordova (updated for working with PhoneGap build process) AND request to stop optimising battery usage (ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+Draw Over All Apps plugin for Cordova AND request to stop optimising battery usage
 ===============================
 
 
-Android Cordova Plugin that uses draw over all apps feature to display a HTML Web view
+Android Cordova Plugin that uses draw over all apps feature to display a HTML Web view (updated for working with PhoneGap build process, R. error was fixed), also was added request to ask for turning off battery optimization (ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).
 
 This plugin was successfully tested on Android 5.1 , also on Marshmallow (Android 6.0).
 
@@ -36,13 +36,6 @@ start service function display the over-all head or the web view according to op
 otherwise the `failed` is called instead.
 
     window.overApps.startOverApp(options, success, failed);
-
-### window.overApps.checkBatteryOptimization
-This to check battery optimising permission (ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
-
-      window.overApps.checkBatteryOptimization(function(msg){
-             console.log(msg);
-      });
 
 #### Options
 
@@ -93,7 +86,12 @@ It closes over app webview from one of the webview UI or event
     OverApps.closeWebView();
 
 
+### window.overApps.checkBatteryOptimization
+This to check battery optimising permission (ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
 
+      window.overApps.checkBatteryOptimization(function(msg){
+             console.log(msg);
+      });
 
 ## Licence ##
 
